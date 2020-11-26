@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "VirusScannerConsole": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "development"
+      }
+    }
+  }
+}
