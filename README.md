@@ -1,4 +1,4 @@
-# VirusScanner
+# Virus Scanner
 Clam AV virus scanning tool
 
 ##Getting started 
