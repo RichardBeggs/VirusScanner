@@ -171,7 +171,10 @@ namespace VirusScannerConsole
         {
             var settings = new Settings.ClamAvServer();
             _config.GetSection(ClamAvServer).Bind(settings);
-            return new ClamClient(settings.Url, Convert.ToInt32(settings.Port));
+
+            var port = Convert.ToInt32(settings.Port);
+            var url = settings.Url;
+            return new ClamClient(url, port);
         }
 
         /// <summary>
