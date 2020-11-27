@@ -14,6 +14,7 @@
             public string DropFolder { get; set; }
             public string ErrorFolder { get; set; }
             public string QuarantineFolder { get; set; }
+            public string UnknownFolder { get; set; }
         }
     }
 }
