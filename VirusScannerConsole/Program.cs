@@ -28,6 +28,9 @@ namespace VirusScannerConsole
                 case TargetLocations.Quarantine:
                     return fileLocations.QuarantineFolder;
 
+                case TargetLocations.Unknown:
+                    return fileLocations.UnknownFolder;
+
                 default:
                     return fileLocations.ErrorFolder;
             }
@@ -148,11 +151,13 @@ namespace VirusScannerConsole
                     case ClamScanResults.Error:
                         Console.WriteLine(
                             $"An error occured while scanning the file! ScanResult: {scanResult.RawResult}");
+                        MoveToFolder(filepath, TargetLocations.Error);
                         break;
 
                     case ClamScanResults.Unknown:
                         Console.WriteLine(
                             $"Unknown scan result while scanning the file! ScanResult: {scanResult.RawResult}");
+                        MoveToFolder(filepath, TargetLocations.Unknown);
                         break;
 
                     default:
